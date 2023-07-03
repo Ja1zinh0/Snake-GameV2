@@ -19,6 +19,8 @@ To try the game yourself, follow these steps:
 
 ## Demo
 To see a demonstration of the game, check out the following video: [Snake Game V2- Demo](https://www.youtube.com/watch?v=A61zsRhU3tg)
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=A61zsRhU3tg
+" target="_blank"></a>
 
 ## Contribution
 
