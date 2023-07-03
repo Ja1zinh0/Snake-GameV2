@@ -1,5 +1,4 @@
 import pygame
-import asyncio
 from pygame.locals import *
 from screen import Screen
 from snake import Snake
