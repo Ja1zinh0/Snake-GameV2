@@ -14,7 +14,7 @@
 To try the game yourself, follow these steps:
 
 1. **Clone the repository**.
-2. Open the **Dist** folder.
+2. Open the **game** folder.
 3. **Execute the `main.exe` file**.
 
 ## Contribution
