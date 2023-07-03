@@ -4,14 +4,16 @@ from pygame.locals import *
 from screen import Screen
 from snake import Snake
 from food import Food
-
+from scoreboard import Scoreboard
 restart = False
 def start_game():
     pygame.init()
-
+    
     screen = Screen()
     snake = Snake()
     apple = Food()
+    scoreboard = Scoreboard()
+    
     UP = 0
     RIGHT = 1
     DOWN = 2
@@ -58,6 +60,7 @@ def start_game():
         if snake.collision(snake.snake[0], apple_position):
             apple_position = random_grid()
             snake.snake.append((0, 0))
+            scoreboard.increase_score()
             
         if snake.snake[0][0] == 600 or snake.snake[0][1] == 600 or snake.snake[0][0] < 0 or snake.snake[0][1] < 0:
             game_on = False
@@ -90,10 +93,12 @@ def start_game():
         
         for position in snake.snake:
             screen.blit(snake.snake_skin, position)
+            
+        
+        screen.window.blit(scoreboard.score_screen, scoreboard.score_rect)
              
         pygame.display.update()
 
-    # Tela de Game Over
     game_over_font = pygame.font.Font('freesansbold.ttf', 60)
     game_over_screen = game_over_font.render('Game Over', True, (255, 255, 255))
     game_over_rect = game_over_screen.get_rect()
@@ -103,9 +108,8 @@ def start_game():
     additional_text_screen = additional_text_font.render('Press backspace to play again', True, (255, 255, 255))
     additional_text_rect = additional_text_screen.get_rect()
     additional_text_rect.midtop = (600 // 2, game_over_rect.bottom)
-    
-    
 
+        
     screen.window.blit(game_over_screen, game_over_rect)
     screen.window.blit(additional_text_screen, additional_text_rect)
     pygame.display.update()
