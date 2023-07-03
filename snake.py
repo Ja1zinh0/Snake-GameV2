@@ -33,19 +33,26 @@ class Snake():
             self.snake[i] = (self.snake[i - 1][0], self.snake[i - 1][1])
             
         for event in pygame.event.get():
+            if event.type == QUIT:
+                pygame.quit()
+                exit()
             if event.type == KEYDOWN and not changing_direction:
-                if event.key == K_UP or event.key == K_w and self.direction != DOWN:
-                    self.direction = UP
-                    changing_direction = True
-                if event.key == K_DOWN or event.key == K_s and self.direction != UP:
-                    self.direction = DOWN
-                    changing_direction = True
-                if event.key == K_LEFT or event.key == K_a and self.direction != RIGHT:
-                    self.direction = LEFT
-                    changing_direction = True
-                if event.key == K_RIGHT or event.key == K_d and self.direction != LEFT:
-                    self.direction = RIGHT
-                    changing_direction = True
+                if event.key == K_UP or event.key == K_w:
+                    if self.direction != DOWN:
+                        self.direction = UP
+                        changing_direction = True
+                if event.key == K_DOWN or event.key == K_s:
+                    if self.direction != UP:
+                        self.direction = DOWN
+                        changing_direction = True
+                if event.key == K_LEFT or event.key == K_a:
+                    if self.direction != RIGHT:
+                        self.direction = LEFT
+                        changing_direction = True
+                if event.key == K_RIGHT or event.key == K_d:
+                    if self.direction != LEFT:
+                        self.direction = RIGHT
+                        changing_direction = True
          
         if self.direction == UP:
             self.snake[0] = (self.snake[0][0], self.snake[0][1] - 20)

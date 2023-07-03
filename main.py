@@ -58,12 +58,12 @@ def start_game():
         
         #updating the screen
         pygame.display.update()
-   
+        
     #show the game over screen
     screen.game_over(scoreboard.score)
     
     #restart or quit the game
-    while game_on == False:
+    while not game_on:
         for event in pygame.event.get():
             if event.type == QUIT:
                 pygame.quit()
