@@ -5,7 +5,7 @@
 
 ## How to Play
 
-- Use the arrow keys to control the snake.
+- Use the arrow keys or AWSD to control the snake.
 - Try to eat the red apples to score points.
 - Avoid colliding with the walls or the snake's own body.
 
@@ -31,7 +31,7 @@ Contributions are welcome! If you encounter any issues or have suggestions to im
 
 ## Como Jogar
 
-- Use as teclas de seta para controlar a cobrinha.
+- Use as setinhas ou AWSD para controlar a cobrinha.
 - Tente comer as maçãs vermelhas para marcar pontos.
 - Evite colidir com as paredes ou com o próprio corpo da cobrinha.
 
