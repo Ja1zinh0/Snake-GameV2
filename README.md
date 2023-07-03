@@ -17,6 +17,9 @@ To try the game yourself, follow these steps:
 2. Open the **game** folder.
 3. **Execute the `main.exe` file**.
 
+## Demo
+To see a demonstration of the game, check out the following video: [Snake Game V2- Demo](https://www.youtube.com/watch?v=A61zsRhU3tg)
+
 ## Contribution
 
 Contributions are welcome! If you encounter any issues or have suggestions to improve the game, feel free to open an issue or submit a pull request.
@@ -44,6 +47,9 @@ Para jogar o jogo, siga estes passos:
 1. **Clone o repositório**.
 2. Abra a pasta **game**.
 3. **Execute o arquivo `main.exe`**.
+
+## Demonstração
+Clique aqui para ver uma demonstração em vídeo do jogo [Snake Game V2- Demonstração](https://www.youtube.com/watch?v=A61zsRhU3tg)
 
 ## Contribuição
 
