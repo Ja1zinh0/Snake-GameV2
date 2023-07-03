@@ -1,4 +1,5 @@
 import pygame
+import sys
 from pygame.locals import *
 pygame.init()
 
@@ -35,7 +36,7 @@ class Snake():
         for event in pygame.event.get():
             if event.type == QUIT:
                 pygame.quit()
-                exit()
+                sys.exit()
             if event.type == KEYDOWN and not changing_direction:
                 if event.key == K_UP or event.key == K_w:
                     if self.direction != DOWN:

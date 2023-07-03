@@ -5,7 +5,7 @@ from screen import Screen
 from snake import Snake
 from food import Food
 from scoreboard import Scoreboard
-
+import sys
 
 def start_game():
     pygame.init()
@@ -67,7 +67,7 @@ def start_game():
         for event in pygame.event.get():
             if event.type == QUIT:
                 pygame.quit()
-                exit()
+                sys.exit()
             if event.type == KEYDOWN:
                 if event.key == K_r:
                     start_game()
