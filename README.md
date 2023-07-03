@@ -1,6 +1,6 @@
 # Snake-GameV2
 
-**Recreating my snake game using the correct library to fix some bugs and make it better.**  
+**Recreating my snake game using the correct library to fix some bugs.**  
 **The main goal now is to use this game to apply reinforced learning to teach an AI how to play the game autonomously.**
 
 ## How to Play
@@ -14,7 +14,7 @@
 To try the game yourself, follow these steps:
 
 1. **Clone the repository**.
-2. Open the **Dist** folder.
+2. Open the **game** folder.
 3. **Execute the `main.exe` file**.
 
 ## Contribution
