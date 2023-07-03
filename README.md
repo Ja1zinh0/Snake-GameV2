@@ -1,7 +1,7 @@
 # Snake-GameV2
 
 **Recreating my snake game using the correct library to fix some bugs.**  
-**The main goal now is to use this game to apply reinforced learning to teach an AI how to play the game autonomously.**
+**The main goal now is to use this game and apply reinforced learning to teach an AI how to play the game autonomously.**
 
 ## How to Play
 
