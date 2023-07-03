@@ -25,6 +25,8 @@ Contributions are welcome! If you encounter any issues or have suggestions to im
 
 - No additional installations are required to play the game. Simply follow the steps above and start playing!
 
+- Have fun! 🐍🎮
+
 ## Snake Game (Versão em Português)
 
 **Recriando meu primeiro snake game usando a biblioteca correta para corrigir alguns bugs e adicionar melhorias. O principal objetivo agora é usar este jogo para aplicar aprendizado por reforço e ensinar uma I.A a jogar o jogo de forma autônoma.**
@@ -50,3 +52,5 @@ Contribuições são bem-vindas! Se você encontrar algum problema ou tiver suge
 **Observações:**
 
 - Não são necessárias instalações adicionais para jogar o jogo. Basta seguir os passos acima e começar a jogar!
+
+- Diverta-se! 🐍🎮
