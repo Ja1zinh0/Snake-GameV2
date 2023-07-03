@@ -42,7 +42,7 @@ Contributions are welcome! If you encounter any issues or have suggestions to im
 Para jogar o jogo, siga estes passos:
 
 1. **Clone o repositório**.
-2. Abra a pasta **Dist**.
+2. Abra a pasta **game**.
 3. **Execute o arquivo `main.exe`**.
 
 ## Contribuição
