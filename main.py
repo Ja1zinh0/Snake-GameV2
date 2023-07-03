@@ -1,14 +1,14 @@
 import pygame
+import asyncio
 from pygame.locals import *
 from screen import Screen
 from snake import Snake
 from food import Food
 from scoreboard import Scoreboard
 
-def start_game():
+
+def game_loop():
     pygame.init()
-    
-    #creating objects
     screen = Screen()
     snake = Snake()
     apple = Food()
@@ -18,56 +18,74 @@ def start_game():
     game_on = True
     changing_direction = False
     clock = pygame.time.Clock()
-    
+
     while game_on:
-        #controlling game speed
+        # Controlling game speed
         clock.tick(18)
-                
-        #checking collisions
+
+        # Checking collisions
         if snake.apple_collision(snake.snake[0], apple_position):
             apple_position = apple.generate_position()
             snake.snake.append((0, 0))
             scoreboard.increase_score()
-            
+
         if snake.wall_collision():
             game_on = False
-            
+
         if snake.self_collision():
             game_on = False
-                
-        #controlling the snake movement
+
+        # Controlling the snake movement
         snake.control_movement(changing_direction)
-        
-        #refreshing the screen to create a new apple and remove the snake trail
+
+        # Refreshing the screen to create a new apple and remove the snake trail
         screen.refresh(apple.apple_skin, apple_position)
-        
-        #drawing the game grid
+
+        # Drawing the game grid
         screen.draw_grid()
-        
-        #drawing the snake
+
+        # Drawing the snake
         for position in snake.snake:
             screen.blit(snake.snake_skin, position)
-            
-        #creating the scoreboard
+
+        # Creating the scoreboard
         screen.window.blit(scoreboard.score_screen, scoreboard.score_rect)
-        
-        #reseting the snake direction
+
+        # Reseting the snake direction
         changing_direction = False
         
-        #updating the screen
+        #saving the final score
+        global final_score 
+        final_score = scoreboard.score
+        
+        # Updating the screen
         pygame.display.update()
         
-    #show the game over screen
-    screen.game_over()
+    return game_on
 
-    #restart or quit the game
-    while game_on == False:
-        for event in pygame.event.get():
-            if event.type == QUIT:
-                pygame.quit()
-                exit()
-            if event.type == KEYDOWN:
-                if event.key == K_r:
-                    start_game()
 
-start_game()
+def start_game():
+    while True:
+        game_on = True
+        while game_on:
+            game_on = game_loop()
+
+        # Show the game over screen
+        screen = Screen()
+        screen.game_over(final_score)
+        pygame.display.update()
+
+        # Restart or quit the game
+        restart = False
+        while not restart:
+            for event in pygame.event.get():
+                if event.type == QUIT:
+                    pygame.quit()
+                    exit()
+                if event.type == KEYDOWN:
+                    if event.key == K_r:
+                        restart = True
+
+        pygame.quit()
+
+asyncio.run(start_game())

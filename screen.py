@@ -30,8 +30,8 @@ class Screen():
         self.text_rect.midtop = (x, y)
         self.window.blit(text_surface, self.text_rect)
 
-    def game_over(self):
+    def game_over(self, score):
         self.render_text('Game Over', 'courier', 60, (255, 255, 255), 600 // 2, 10)
         self.render_text('Press R to play again', 'courier', 30, (255, 255, 255), 600 // 2, self.text_rect.bottom)
-        pygame.display.update()
+        self.render_text(f'Final score: {score}', 'courier', 30, (255, 255, 255), 600 // 2, self.text_rect.bottom)
         
