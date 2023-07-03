@@ -18,7 +18,7 @@ To try the game yourself, follow these steps:
 3. **Execute the `main.exe` file**.
 
 ## Demo
-To see a demonstration of the game, check out the following video: [Snake Game V2- Demo](https://www.youtube.com/watch?v=A61zsRhU3tg){:target="_blank"}
+To see a demonstration of the game, check out the following video: [Snake Game V2- Demo](https://www.youtube.com/watch?v=A61zsRhU3tg)
 
 ## Contribution
 
@@ -49,7 +49,7 @@ Para jogar o jogo, siga estes passos:
 3. **Execute o arquivo `main.exe`**.
 
 ## Demonstração
-Clique aqui para ver uma demonstração em vídeo do jogo [Snake Game V2- Demonstração](https://www.youtube.com/watch?v=A61zsRhU3tg){:target="_blank"}
+Clique aqui para ver uma demonstração em vídeo do jogo [Snake Game V2- Demonstração](https://www.youtube.com/watch?v=A61zsRhU3tg)
 
 ## Contribuição
 
